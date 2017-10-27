@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <title>delete</title>
+</head>
+<body>
+<h1>Delete user</h1>
+<form th:action="@{/delete}" method="post">
+    <p>Are you sure?</p>
+    <input type="submit" onclick="alert('User has been deleted')" value="Yes" />
+</form>
+<p><a href="/" class="btn">Back</a></p>
+</body>
+</html>

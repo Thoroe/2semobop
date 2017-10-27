@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Create</title>
+</head>
+<body>
+<h1>Create a new account</h1>
+
+<form th:action="@{/create}" method="post" th:object="${user}">
+   <p>Name: </p> <input type="text" th:field="*{name}" />
+   <p>Password: </p> <input type="password" th:field="*{password}" />
+   <p>Email: </p> <input type="text" th:field="*{email}" />
+   <p>Address: </p> <input type="text" th:field="*{address}" />
+    <input type="submit" value="Send" />
+</form>
+<p><a href="/" class="btn">Back</a></p>
+
+</body>
+</html>

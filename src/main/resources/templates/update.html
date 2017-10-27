@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <title>update secret</title>
+</head>
+<body>
+<h1>Update details</h1>
+
+<form th:action="@{/update}" method="post" th:object="${user}">
+    <p>ID: </p><input type="text" th:field="*{userId}" readonly="readonly" />
+    <p>Name: </p><input type="text" th:field="*{name}" />
+    <p>Address: </p><input type="text" th:field="*{address}" />
+    <p>Email: </p><input type="text" th:field="*{email}" />
+    <p><input type="submit" value="Save changes" /></p>
+</form>
+<form action="/password">
+    <p><input type="submit" value="Change password" /></p>
+</form>
+<form action="/delete">
+    <p><input type="submit" value="Delete user" /></p>
+</form>
+<p><a href="/" class="btn">Back</a></p>
+</body>
+</html>
